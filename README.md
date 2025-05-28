@@ -1,0 +1,2 @@
+# arabic-style
+arabic-theme
