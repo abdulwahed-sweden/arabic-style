@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -8,10 +9,8 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- الخطوط العربية -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/droidarabickufi.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- ملف الخطوط المنفصل -->
+    <link rel="stylesheet" href="fonts.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,9 +20,9 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        'kufi': ['Droid Arabic Kufi', 'Tajawal', 'system-ui', 'sans-serif'],
-                        'naskh': ['Droid Arabic Naskh', 'Tajawal', 'system-ui', 'sans-serif'],
-                        'tajawal': ['Tajawal', 'system-ui', 'sans-serif'],
+                        'heading': ['var(--font-heading)'],
+                        'body': ['var(--font-body)'],
+                        'ui': ['var(--font-ui)'],
                     },
                     colors: {
                         'primary': {
@@ -57,10 +56,10 @@
     </script>
     
     <style>
-        /* تخصيص الأزرار للحفاظ على الشكل الأصلي */
+        /* استخدام متغيرات الخطوط من ملف fonts.css */
         .btn {
-            font-family: 'Tajawal', system-ui, sans-serif;
-            font-weight: 500;
+            font-family: var(--font-ui);
+            font-weight: var(--font-weight-medium);
             font-size: 0.875rem;
             line-height: 1.5;
             padding: 0.625rem 1.25rem;
@@ -81,13 +80,13 @@
         }
 
         .btn-primary {
-            background-color: #0ea5e9;
+            background-color: #030725;
             border-color: #0ea5e9;
             color: #ffffff;
         }
 
         .btn-primary:hover:not(:disabled) {
-            background-color: #0284c7;
+            background-color: #0316aa;
             border-color: #0284c7;
             color: #ffffff;
             transform: translateY(-2px);
@@ -120,11 +119,6 @@
             opacity: 0.6;
             cursor: not-allowed;
         }
-
-        /* تحسين الخطوط */
-        .font-kufi { font-family: 'Droid Arabic Kufi', 'Tajawal', system-ui, sans-serif; }
-        .font-naskh { font-family: 'Droid Arabic Naskh', 'Tajawal', system-ui, sans-serif; }
-        .font-tajawal { font-family: 'Tajawal', system-ui, sans-serif; }
     </style>
 </head>
 <body class="bg-gradient-to-br from-white via-gray-50 to-gray-100 font-naskh text-slate-800">
@@ -133,7 +127,7 @@
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <a href="#" class="flex items-center text-xl font-bold font-kufi text-slate-800">
+                    <a href="#" class="flex items-center text-xl font-bold font-heading text-slate-800">
                         <i class="fas fa-code ml-2 text-accent-600"></i>
                         الثيم العربي
                     </a>
@@ -142,10 +136,10 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="flex items-center space-x-4 space-x-reverse">
-                        <a href="#home" class="nav-link font-tajawal font-medium text-sm text-slate-600 hover:text-primary-600 px-3 py-2 rounded-lg hover:bg-primary-50 transition-all duration-200">الرئيسية</a>
-                        <a href="#features" class="nav-link font-tajawal font-medium text-sm text-slate-600 hover:text-primary-600 px-3 py-2 rounded-lg hover:bg-primary-50 transition-all duration-200">المميزات</a>
-                        <a href="#components" class="nav-link font-tajawal font-medium text-sm text-slate-600 hover:text-primary-600 px-3 py-2 rounded-lg hover:bg-primary-50 transition-all duration-200">المكونات</a>
-                        <a href="#contact" class="nav-link font-tajawal font-medium text-sm text-slate-600 hover:text-primary-600 px-3 py-2 rounded-lg hover:bg-primary-50 transition-all duration-200">التواصل</a>
+                        <a href="#home" class="nav-link font-ui font-medium text-sm text-slate-600 hover:text-primary-600 px-3 py-2 rounded-lg hover:bg-primary-50 transition-all duration-200">الرئيسية</a>
+                        <a href="#features" class="nav-link font-ui font-medium text-sm text-slate-600 hover:text-primary-600 px-3 py-2 rounded-lg hover:bg-primary-50 transition-all duration-200">المميزات</a>
+                        <a href="#components" class="nav-link font-ui font-medium text-sm text-slate-600 hover:text-primary-600 px-3 py-2 rounded-lg hover:bg-primary-50 transition-all duration-200">المكونات</a>
+                        <a href="#contact" class="nav-link font-ui font-medium text-sm text-slate-600 hover:text-primary-600 px-3 py-2 rounded-lg hover:bg-primary-50 transition-all duration-200">التواصل</a>
                     </div>
                 </div>
                 
@@ -183,7 +177,7 @@
         <div class="container mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="text-center lg:text-right">
-                    <h1 class="text-4xl lg:text-5xl font-bold font-kufi text-slate-800 mb-6 leading-tight">
+                    <h1 class="text-3xl lg:text-4xl font-bold font-heading text-slate-800 mb-6 leading-tight">
                         نظام الثيم العربي 
                         <span class="text-primary-600 bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">المتكامل</span>
                     </h1>
@@ -205,7 +199,7 @@
                 <div class="text-center">
                     <div class="bg-gradient-to-br from-white to-gray-100 p-12 rounded-3xl shadow-xl border border-gray-200/50">
                         <i class="fas fa-palette text-8xl text-accent-500 mb-6"></i>
-                        <h3 class="text-2xl font-kufi font-semibold text-slate-800">تصميم عربي أصيل</h3>
+                        <h3 class="text-xl font-heading font-semibold text-slate-800">تصميم عربي أصيل</h3>
                     </div>
                 </div>
             </div>
@@ -216,7 +210,7 @@
     <section id="features" class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold font-kufi text-slate-800 mb-4">مميزات النظام</h2>
+                <h2 class="text-2xl lg:text-3xl font-bold font-kufi text-slate-800 mb-4">مميزات النظام</h2>
                 <p class="text-lg text-slate-600">مجموعة شاملة من الأدوات والمكونات لبناء مواقع عربية متميزة</p>
             </div>
             
@@ -225,7 +219,7 @@
                     <div class="feature-icon w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-language"></i>
                     </div>
-                    <h4 class="text-xl font-kufi font-semibold text-slate-800 mb-4">دعم كامل للعربية</h4>
+                    <h4 class="text-lg font-kufi font-semibold text-slate-800 mb-4">دعم كامل للعربية</h4>
                     <p class="text-slate-600 leading-relaxed">تحسينات خاصة للغة العربية مع دعم RTL والخطوط العربية المتقدمة للحصول على تجربة مستخدم مثالية.</p>
                 </div>
                 
@@ -233,7 +227,7 @@
                     <div class="feature-icon w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h4 class="text-xl font-kufi font-semibold text-slate-800 mb-4">تصميم متجاوب</h4>
+                    <h4 class="text-lg font-kufi font-semibold text-slate-800 mb-4">تصميم متجاوب</h4>
                     <p class="text-slate-600 leading-relaxed">يعمل بشكل مثالي على جميع الأجهزة والشاشات مع تحسينات خاصة لضمان تجربة سلسة.</p>
                 </div>
                 
@@ -241,7 +235,7 @@
                     <div class="feature-icon w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-full flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <h4 class="text-xl font-kufi font-semibold text-slate-800 mb-4">قابل للتخصيص</h4>
+                    <h4 class="text-lg font-kufi font-semibold text-slate-800 mb-4">قابل للتخصيص</h4>
                     <p class="text-slate-600 leading-relaxed">متغيرات CSS سهلة التعديل مع إمكانيات تخصيص واسعة لتناسب احتياجات مشروعك.</p>
                 </div>
                 
@@ -249,7 +243,7 @@
                     <div class="feature-icon w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h4 class="text-xl font-kufi font-semibold text-slate-800 mb-4">أداء عالي</h4>
+                    <h4 class="text-lg font-kufi font-semibold text-slate-800 mb-4">أداء عالي</h4>
                     <p class="text-slate-600 leading-relaxed">محسن للأداء والسرعة مع أكواد CSS و JavaScript نظيفة ومحسنة للوصول السريع.</p>
                 </div>
                 
@@ -257,7 +251,7 @@
                     <div class="feature-icon w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-puzzle-piece"></i>
                     </div>
-                    <h4 class="text-xl font-kufi font-semibold text-slate-800 mb-4">مكونات جاهزة</h4>
+                    <h4 class="text-lg font-kufi font-semibold text-slate-800 mb-4">مكونات جاهزة</h4>
                     <p class="text-slate-600 leading-relaxed">مجموعة واسعة من المكونات الجاهزة للاستخدام الفوري مع إمكانية التخصيص السهل.</p>
                 </div>
                 
@@ -265,7 +259,7 @@
                     <div class="feature-icon w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                         <i class="fab fa-github"></i>
                     </div>
-                    <h4 class="text-xl font-kufi font-semibold text-slate-800 mb-4">مفتوح المصدر</h4>
+                    <h4 class="text-lg font-kufi font-semibold text-slate-800 mb-4">مفتوح المصدر</h4>
                     <p class="text-slate-600 leading-relaxed">متوفر على GitHub للمشاركة والتطوير المستمر مع مجتمع المطورين العرب.</p>
                 </div>
             </div>
@@ -276,7 +270,7 @@
     <section id="components" class="py-20 bg-gradient-to-br from-gray-100 via-gray-50 to-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold font-kufi text-slate-800 mb-4">معاينة المكونات</h2>
+                <h2 class="text-2xl lg:text-3xl font-bold font-kufi text-slate-800 mb-4">معاينة المكونات</h2>
                 <p class="text-lg text-slate-600">أمثلة على بعض المكونات المتاحة في النظام</p>
             </div>
             
@@ -323,7 +317,7 @@
                             <h5 class="text-lg font-kufi font-semibold text-slate-800">بطاقة نموذجية</h5>
                         </div>
                         <div class="p-6 flex flex-col h-full">
-                            <h6 class="text-lg font-kufi font-semibold text-slate-800 mb-3">عنوان البطاقة</h6>
+                            <h6 class="text-base font-kufi font-semibold text-slate-800 mb-3">عنوان البطاقة</h6>
                             <p class="text-slate-600 leading-relaxed mb-6 flex-grow">هذا نص تجريبي لإظهار شكل البطاقة والنصوص بداخلها مع تصميم جميل ومناسب.</p>
                             <button class="btn btn-primary btn-sm self-start">اقرأ المزيد</button>
                         </div>
@@ -365,8 +359,8 @@
                         <div class="grid md:grid-cols-3 gap-8">
                             <div>
                                 <h6 class="text-primary-600 font-tajawal font-medium mb-3">خط الكوفي (العناوين)</h6>
-                                <h3 class="text-2xl font-kufi font-bold text-slate-800 mb-2">عنوان بالخط الكوفي</h3>
-                                <h4 class="text-xl font-kufi font-semibold text-slate-700">عنوان فرعي</h4>
+                                <h3 class="text-xl font-kufi font-bold text-slate-800 mb-2">عنوان بالخط الكوفي</h3>
+                                <h4 class="text-lg font-kufi font-semibold text-slate-700">عنوان فرعي</h4>
                             </div>
                             <div>
                                 <h6 class="text-primary-600 font-tajawal font-medium mb-3">خط النسخ (المحتوى)</h6>
@@ -388,7 +382,7 @@
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-bold font-kufi text-slate-800 mb-4">ابدأ استخدام النظام</h2>
+                    <h2 class="text-2xl lg:text-3xl font-bold font-kufi text-slate-800 mb-4">ابدأ استخدام النظام</h2>
                     <p class="text-lg text-slate-600">احصل على نسختك من النظام وابدأ في بناء مواقع عربية احترافية</p>
                 </div>
                 
@@ -398,7 +392,7 @@
                             <div class="w-20 h-20 bg-gradient-to-br from-accent-100 to-accent-50 rounded-full flex items-center justify-center mx-auto mb-6">
                                 <i class="fab fa-github text-3xl text-accent-600"></i>
                             </div>
-                            <h4 class="text-2xl font-kufi font-bold text-slate-800 mb-3">متوفر على GitHub</h4>
+                            <h4 class="text-xl font-kufi font-bold text-slate-800 mb-3">متوفر على GitHub</h4>
                             <p class="text-slate-600">يمكنك تحميل النظام والمساهمة في تطويره</p>
                         </div>
                         
@@ -429,9 +423,15 @@
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div class="lg:col-span-2">
-                    <h4 class="text-xl font-kufi font-bold mb-4">نظام الثيم العربي</h4>
+                    <h4 class="text-lg font-kufi font-bold mb-4">نظام الثيم العربي</h4>
                     <p class="text-slate-300 leading-relaxed mb-6 max-w-md">إطار عمل شامل لتصميم المواقع العربية بشكل احترافي وعصري مع دعم كامل للغة العربية وأحدث تقنيات الويب.</p>
                     <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center hover:bg-accent-600 transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center hover:bg-accent-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
                         <a href="#" class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center hover:bg-accent-600 transition-colors">
                             <i class="fab fa-linkedin"></i>
                         </a>
@@ -439,7 +439,7 @@
                 </div>
                 
                 <div>
-                    <h5 class="text-lg font-kufi font-semibold mb-4">روابط سريعة</h5>
+                    <h5 class="text-base font-kufi font-semibold mb-4">روابط سريعة</h5>
                     <ul class="space-y-3">
                         <li><a href="#home" class="text-slate-300 hover:text-accent-400 transition-colors">الرئيسية</a></li>
                         <li><a href="#features" class="text-slate-300 hover:text-accent-400 transition-colors">المميزات</a></li>
@@ -449,7 +449,7 @@
                 </div>
                 
                 <div>
-                    <h5 class="text-lg font-kufi font-semibold mb-4">الدعم</h5>
+                    <h5 class="text-base font-kufi font-semibold mb-4">الدعم</h5>
                     <ul class="space-y-3">
                         <li><a href="#" class="text-slate-300 hover:text-accent-400 transition-colors">التوثيق</a></li>
                         <li><a href="#" class="text-slate-300 hover:text-accent-400 transition-colors">الأمثلة</a></li>

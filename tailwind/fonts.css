@@ -1,0 +1,257 @@
+/*!
+ * Arabic Fonts Configuration
+ * ملف إعدادات الخطوط العربية
+ * يمكن تغيير الخطوط بسهولة من هنا
+ */
+
+/* ===== استيراد الخطوط من Google Fonts ===== */
+
+/* الخط الحالي للعناوين: Almarai */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+/* الخط الحالي للمحتوى: Noto Sans Arabic */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* الخط الحالي للواجهة: Tajawal */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+
+/* ===== تعريف الخطوط المتاحة ===== */
+
+/* يمكنك إلغاء التعليق عن أي خط وتعليق الخط الحالي للتبديل */
+
+/* خط المراي - الحالي للعناوين */
+/* @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap'); */
+
+/* خط نوتو ساس العربي - الحالي للمحتوى */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+/* خط نوتو كوفي العربي - للعناوين */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+/* خط نوتو نسخ العربي - للمحتوى */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap'); */
+
+/* خط IBM Plex Sans Arabic - تقني وعصري */
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap'); */
+
+/* خط Readex Pro - للقراءة */
+/* @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160;200;300;400;500;600;700&display=swap'); */
+
+/* خط Changa - عصري ومميز */
+/* @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap'); */
+
+/* خط Amiri - كلاسيكي وأنيق */
+/* @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap'); */
+
+/* خط Vazirmatn - حديث وواضح */
+/* @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+
+/* ===== إعدادات الخطوط الأساسية ===== */
+
+:root {
+    /* الخطوط الحالية - يمكن تغييرها هنا */
+    --font-heading: 'Almarai', 'Tajawal', system-ui, sans-serif;           /* خط العناوين */
+    --font-body: 'Noto Sans Arabic', 'Tajawal', system-ui, sans-serif;     /* خط المحتوى */
+    --font-ui: 'Tajawal', system-ui, sans-serif;                          /* خط الواجهة */
+    
+    /* أوزان الخطوط */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+    
+    /* أحجام الخطوط */
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+    --font-size-2xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 1.875rem;    /* 30px */
+    --font-size-4xl: 2.25rem;     /* 36px */
+    --font-size-5xl: 3rem;        /* 48px */
+    
+    /* ارتفاع الأسطر */
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    --line-height-loose: 2;
+}
+
+/* ===== تطبيق الخطوط ===== */
+
+/* خط العناوين */
+.font-heading,
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.card-title {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+}
+
+/* خط المحتوى */
+.font-body,
+body,
+p,
+.card-text,
+.lead {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-relaxed);
+}
+
+/* خط الواجهة */
+.font-ui,
+.btn,
+.nav-link,
+.form-label,
+.form-control,
+.badge {
+    font-family: var(--font-ui);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-normal);
+}
+
+/* ===== فئات مساعدة للخطوط ===== */
+
+/* أوزان الخطوط */
+.font-light { font-weight: var(--font-weight-light); }
+.font-regular { font-weight: var(--font-weight-regular); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+.font-extrabold { font-weight: var(--font-weight-extrabold); }
+.font-black { font-weight: var(--font-weight-black); }
+
+/* أحجام الخطوط */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+.text-5xl { font-size: var(--font-size-5xl); }
+
+/* ارتفاع الأسطر */
+.leading-tight { line-height: var(--line-height-tight); }
+.leading-normal { line-height: var(--line-height-normal); }
+.leading-relaxed { line-height: var(--line-height-relaxed); }
+.leading-loose { line-height: var(--line-height-loose); }
+
+/* ===== إعدادات مسبقة للخطوط ===== */
+
+/* يمكنك إلغاء التعليق عن أي مجموعة للتبديل السريع */
+
+/* مجموعة 1: Almarai + Noto Sans Arabic (الحالية) */
+/*
+:root {
+    --font-heading: 'Almarai', 'Tajawal', system-ui, sans-serif;
+    --font-body: 'Noto Sans Arabic', 'Tajawal', system-ui, sans-serif;
+    --font-ui: 'Tajawal', system-ui, sans-serif;
+}
+*/
+
+/* مجموعة 2: Noto Kufi + Noto Naskh */
+/*
+:root {
+    --font-heading: 'Noto Kufi Arabic', system-ui, sans-serif;
+    --font-body: 'Noto Naskh Arabic', system-ui, sans-serif;
+    --font-ui: 'Noto Sans Arabic', system-ui, sans-serif;
+}
+*/
+
+/* مجموعة 3: IBM Plex Arabic (موحد) */
+/*
+:root {
+    --font-heading: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+    --font-ui: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+}
+*/
+
+/* مجموعة 4: Readex Pro (للقراءة) */
+/*
+:root {
+    --font-heading: 'Readex Pro', system-ui, sans-serif;
+    --font-body: 'Readex Pro', system-ui, sans-serif;
+    --font-ui: 'Readex Pro', system-ui, sans-serif;
+}
+*/
+
+/* مجموعة 5: Changa + Noto Sans Arabic */
+/*
+:root {
+    --font-heading: 'Changa', system-ui, sans-serif;
+    --font-body: 'Noto Sans Arabic', system-ui, sans-serif;
+    --font-ui: 'Tajawal', system-ui, sans-serif;
+}
+*/
+
+/* ===== تحسينات الخطوط ===== */
+
+/* تحسين عرض الخطوط */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* تحسين القراءة */
+body {
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* تحسين الخطوط على الشاشات عالية الدقة */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    body {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+/* ===== تعليمات الاستخدام ===== */
+/*
+
+🔤 كيفية تغيير الخطوط:
+
+1. لتغيير خط العناوين:
+   - أبحث عن --font-heading في قسم :root
+   - غير القيمة إلى الخط المطلوب
+
+2. لتغيير خط المحتوى:
+   - أبحث عن --font-body في قسم :root
+   - غير القيمة إلى الخط المطلوب
+
+3. لتغيير خط الواجهة:
+   - أبحث عن --font-ui في قسم :root
+   - غير القيمة إلى الخط المطلوب
+
+4. لاستخدام مجموعة جاهزة:
+   - ألغِ التعليق عن المجموعة المطلوبة
+   - علق على المجموعة الحالية
+
+5. لاستخدام خط جديد:
+   - أضف @import للخط الجديد
+   - أضف الخط إلى المتغير المطلوب
+
+📚 الخطوط المتاحة:
+- Almarai: واضح وعصري
+- Noto Sans Arabic: متوازن ومقروء
+- Noto Kufi Arabic: كوفي حديث
+- Noto Naskh Arabic: نسخي تقليدي
+- IBM Plex Sans Arabic: تقني وأنيق
+- Readex Pro: مصمم للقراءة
+- Changa: عصري ومميز
+- Amiri: كلاسيكي وأنيق
+- Vazirmatn: حديث وواضح
+- Tajawal: متوازن وموثوق
+
+*/
